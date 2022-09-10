@@ -1,9 +1,10 @@
 package main;
 
-
 public class Karakter {
+
     private String tipus;
-    private int eletero = 3;
+    private final int eredetiEletEro = 4;
+    private int eletero = eredetiEletEro;
     private int helyzet;
     private int tamadoEro;
 
@@ -13,6 +14,14 @@ public class Karakter {
         this.tamadoEro = tamadoEro;
     }
 
+    public int getEredetiEletEro() {
+        return eredetiEletEro;
+    }
+
+    public String getTipus() {
+        return tipus;
+    }
+    
     public int getELETERO() {
         return eletero;
     }
@@ -24,7 +33,6 @@ public class Karakter {
     public int getTamadoEro() {
         return tamadoEro;
     }
-    
 
     public void setTipus(String tipus) {
         this.tipus = tipus;
@@ -41,7 +49,5 @@ public class Karakter {
     public void setTamadoEro(int tamadoEro) {
         this.tamadoEro = tamadoEro;
     }
-    
-    
-    
+
 }
