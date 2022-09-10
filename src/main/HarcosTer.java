@@ -71,6 +71,8 @@ public class HarcosTer extends javax.swing.JFrame {
         harcosElet4 = new javax.swing.JButton();
         harcosElet2 = new javax.swing.JButton();
         harcosElet3 = new javax.swing.JButton();
+        jTextField1 = new javax.swing.JTextField();
+        jTextField2 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Játék");
@@ -84,13 +86,13 @@ public class HarcosTer extends javax.swing.JFrame {
         harcosTerLayout.setHorizontalGroup(
             harcosTerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(harcosTerLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(62, 62, 62)
                 .addComponent(mezo1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(69, 69, 69)
+                .addGap(61, 61, 61)
                 .addComponent(mezo2, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(63, 63, 63)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(mezo3, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGap(45, 45, 45))
         );
         harcosTerLayout.setVerticalGroup(
             harcosTerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -106,6 +108,11 @@ public class HarcosTer extends javax.swing.JFrame {
         jatekIranyitasTer.setBorder(javax.swing.BorderFactory.createTitledBorder("Játék irányítás:"));
 
         ujJatekGomb.setText("Új játék");
+        ujJatekGomb.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ujJatekGombActionPerformed(evt);
+            }
+        });
 
         kovetkezoKorGomb.setText("Következő kör");
         kovetkezoKorGomb.addActionListener(new java.awt.event.ActionListener() {
@@ -121,7 +128,7 @@ public class HarcosTer extends javax.swing.JFrame {
             .addGroup(jatekIranyitasTerLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(kovetkezoKorGomb, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 462, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(ujJatekGomb, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -153,21 +160,21 @@ public class HarcosTer extends javax.swing.JFrame {
             varazsloEletEroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(varazsloEletEroLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(varazsloElet1)
+                .addComponent(varazsloElet1, javax.swing.GroupLayout.DEFAULT_SIZE, 74, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(varazsloElet2)
+                .addComponent(varazsloElet2, javax.swing.GroupLayout.DEFAULT_SIZE, 74, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(varazsloElet3)
+                .addComponent(varazsloElet3, javax.swing.GroupLayout.DEFAULT_SIZE, 74, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(varazsloElet4)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(varazsloElet4, javax.swing.GroupLayout.DEFAULT_SIZE, 74, Short.MAX_VALUE)
+                .addContainerGap(12, Short.MAX_VALUE))
         );
         varazsloEletEroLayout.setVerticalGroup(
             varazsloEletEroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(varazsloEletEroLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(varazsloEletEroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(varazsloElet3, javax.swing.GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE)
+                    .addComponent(varazsloElet3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(varazsloElet1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(varazsloElet2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(varazsloElet4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -182,10 +189,16 @@ public class HarcosTer extends javax.swing.JFrame {
 
         hacosElet1.setBackground(new java.awt.Color(32, 255, 0));
         hacosElet1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        hacosElet1.setFocusPainted(false);
+        hacosElet1.setFocusable(false);
+        hacosElet1.setRequestFocusEnabled(false);
+        hacosElet1.setRolloverEnabled(false);
+        hacosElet1.setVerifyInputWhenFocusTarget(false);
 
         harcosElet4.setBackground(new java.awt.Color(32, 255, 0));
 
         harcosElet2.setBackground(new java.awt.Color(32, 255, 0));
+        harcosElet2.setVerifyInputWhenFocusTarget(false);
 
         harcosElet3.setBackground(new java.awt.Color(32, 255, 0));
 
@@ -195,20 +208,21 @@ public class HarcosTer extends javax.swing.JFrame {
             harcosEletEroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(harcosEletEroLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(hacosElet1)
+                .addComponent(hacosElet1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(harcosElet2)
+                .addComponent(harcosElet2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(harcosElet3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
-                .addComponent(harcosElet4))
+                .addComponent(harcosElet3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(4, 4, 4)
+                .addComponent(harcosElet4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         harcosEletEroLayout.setVerticalGroup(
             harcosEletEroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(harcosEletEroLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(harcosEletEroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(hacosElet1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(hacosElet1, javax.swing.GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE)
                     .addComponent(harcosElet2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(harcosElet4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(harcosElet3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -223,10 +237,10 @@ public class HarcosTer extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(varazsloEletEro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(korSzamlaloMezo, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(harcosEletEro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(korSzamlaloMezo, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(harcosEletEro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -235,31 +249,43 @@ public class HarcosTer extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(harcosEletEro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(varazsloEletEro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(varazsloEletEro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(18, 18, 18)
-                        .addComponent(korSzamlaloMezo, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(korSzamlaloMezo, javax.swing.GroupLayout.DEFAULT_SIZE, 42, Short.MAX_VALUE)))
                 .addContainerGap(15, Short.MAX_VALUE))
         );
+
+        jTextField1.setEditable(false);
+        jTextField1.setText("Játék : \"következő kör\" gombal tudja a játékot előre haladtatni és ha nyert(mikor elfogy valaki élete) vagy nem tetszik a jelen helyzet \"Új játékkal\" újra kezdeni.");
+
+        jTextField2.setEditable(false);
+        jTextField2.setText("Karakterek: varázsló akkor sebez(1-et) mikor a harcos mellette vagy ugyan ott van, harcos akkor sebez(2-őt) mikor ugyan ott vannak.");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(67, 67, 67)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jatekIranyitasTer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(harcosTer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(45, 45, 45))
+                .addContainerGap(92, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jTextField2)
+                    .addComponent(jTextField1)
+                    .addComponent(harcosTer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jatekIranyitasTer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(82, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(45, 45, 45)
+                .addGap(16, 16, 16)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(11, 11, 11)
+                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addComponent(harcosTer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jatekIranyitasTer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -274,14 +300,33 @@ public class HarcosTer extends javax.swing.JFrame {
         egyKor();
     }//GEN-LAST:event_kovetkezoKorGombActionPerformed
 
+    private void ujJatekGombActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ujJatekGombActionPerformed
+        kezdoAllapot();
+    }//GEN-LAST:event_ujJatekGombActionPerformed
+
     private void kezdoAllapot() {
         harcosTerek = komponensekLekeres(harcosTer);
         varazsloElete = komponensekLekeres(varazsloEletEro);
         harcosElete = komponensekLekeres(harcosEletEro);
-        KezdoHelyzetLetrehoz(harcosTerek);
+        kezdoHelyzetLetrehoz(harcosTerek);
+        eletEroVisszaAllitas(varazsloElete);
+        eletEroVisszaAllitas(harcosElete);
+        korSzamlaloMezo.setText("kör: 0");
+        korSzamlalo = 0;
+        karakterAdatokVisszaAllitas();
+        kovetkezoKorGomb.setEnabled(true);
+    }
+    private void karakterAdatokVisszaAllitas(){
+        varazslo.setELETERO(4);
+        harcos.setELETERO(4);
+    }
+    private void eletEroVisszaAllitas(JButton[] eletEroBar) {
+        for (int i = 0; i < eletEroBar.length; i++) {
+            eletEroBar[i].setBackground(new Color(32,255,0));
+        }
     }
 
-    private void KezdoHelyzetLetrehoz(JButton[] harcosTer) {
+    private void kezdoHelyzetLetrehoz(JButton[] harcosTer) {
         kepekkeAlakitas();
         harcosTer[0].setIcon((ImageIcon) kepek[2]);
         harcosTer[1].setIcon((ImageIcon) kepek[0]);
@@ -320,11 +365,16 @@ public class HarcosTer extends javax.swing.JFrame {
     private void nyertekE() {
         if(varazslo.getELETERO()==0 && harcos.getELETERO()==0){
             int ablak = new JOptionPane().showConfirmDialog(null, "A harc döntetlen lett!");
+            kovetkezoKorGomb.setEnabled(false);
         }else if(varazslo.getELETERO()==0){
             int ablak = new JOptionPane().showConfirmDialog(null, "A harcos nyert!");
+            kovetkezoKorGomb.setEnabled(false);
+            
         }else if(harcos.getELETERO()==0){
             int ablak = new JOptionPane().showConfirmDialog(null, "A varázsló nyert!");
+            kovetkezoKorGomb.setEnabled(false);
         }
+        
     }
 
     private void sebzesVanE(int varazsloLepes, int harcosLepes) {
@@ -361,6 +411,8 @@ public class HarcosTer extends javax.swing.JFrame {
     private javax.swing.JPanel harcosEletEro;
     private javax.swing.JPanel harcosTer;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
     private javax.swing.JPanel jatekIranyitasTer;
     private javax.swing.JTextField korSzamlaloMezo;
     private javax.swing.JButton kovetkezoKorGomb;
@@ -374,6 +426,8 @@ public class HarcosTer extends javax.swing.JFrame {
     private javax.swing.JButton varazsloElet4;
     private javax.swing.JPanel varazsloEletEro;
     // End of variables declaration//GEN-END:variables
+
+    
 
     
 

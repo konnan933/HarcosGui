@@ -24,23 +24,29 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jatekIranyitasTer" min="-2" max="-2" attributes="0"/>
-                  <Component id="harcosTer" min="-2" max="-2" attributes="0"/>
-                  <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+          <Group type="102" attributes="0">
+              <EmptySpace pref="92" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
+                  <Component id="jTextField2" alignment="0" max="32767" attributes="0"/>
+                  <Component id="jTextField1" alignment="0" max="32767" attributes="0"/>
+                  <Component id="harcosTer" alignment="0" max="32767" attributes="0"/>
+                  <Component id="jatekIranyitasTer" alignment="0" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+              <EmptySpace pref="82" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
-              <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
-              <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+              <Component id="jTextField1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+              <Component id="jTextField2" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jPanel1" max="32767" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="harcosTer" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="jatekIranyitasTer" min="-2" max="-2" attributes="0"/>
@@ -62,14 +68,14 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
                   <Component id="mezo1" min="-2" pref="200" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
                   <Component id="mezo2" min="-2" pref="200" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
                   <Component id="mezo3" min="-2" pref="200" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -78,9 +84,9 @@
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="mezo3" alignment="3" min="-2" pref="200" max="-2" attributes="0"/>
-                      <Component id="mezo2" alignment="3" min="-2" pref="200" max="-2" attributes="0"/>
-                      <Component id="mezo1" alignment="3" min="-2" pref="200" max="-2" attributes="0"/>
+                      <Component id="mezo3" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
+                      <Component id="mezo2" alignment="1" min="-2" pref="200" max="-2" attributes="0"/>
+                      <Component id="mezo1" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -114,7 +120,7 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="kovetkezoKorGomb" min="-2" pref="135" max="-2" attributes="0"/>
-                  <EmptySpace pref="462" max="32767" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
                   <Component id="ujJatekGomb" min="-2" pref="135" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -138,6 +144,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="&#xda;j j&#xe1;t&#xe9;k"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ujJatekGombActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="kovetkezoKorGomb">
           <Properties>
@@ -165,10 +174,10 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="varazsloEletEro" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="korSzamlaloMezo" min="-2" pref="60" max="-2" attributes="0"/>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="harcosEletEro" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="korSzamlaloMezo" min="-2" pref="38" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="harcosEletEro" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -179,11 +188,11 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
                           <Component id="harcosEletEro" max="32767" attributes="0"/>
-                          <Component id="varazsloEletEro" min="-2" max="-2" attributes="0"/>
+                          <Component id="varazsloEletEro" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                          <Component id="korSzamlaloMezo" min="-2" pref="27" max="-2" attributes="0"/>
+                          <Component id="korSzamlaloMezo" pref="42" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace pref="15" max="32767" attributes="0"/>
@@ -206,14 +215,14 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="varazsloElet1" min="-2" max="-2" attributes="0"/>
+                      <Component id="varazsloElet1" pref="74" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="varazsloElet2" min="-2" max="-2" attributes="0"/>
+                      <Component id="varazsloElet2" pref="74" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="varazsloElet3" min="-2" max="-2" attributes="0"/>
+                      <Component id="varazsloElet3" pref="74" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="varazsloElet4" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="varazsloElet4" pref="74" max="32767" attributes="0"/>
+                      <EmptySpace pref="12" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -222,7 +231,7 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="varazsloElet3" pref="25" max="32767" attributes="0"/>
+                          <Component id="varazsloElet3" max="32767" attributes="0"/>
                           <Component id="varazsloElet1" max="32767" attributes="0"/>
                           <Component id="varazsloElet2" max="32767" attributes="0"/>
                           <Component id="varazsloElet4" alignment="0" max="32767" attributes="0"/>
@@ -286,13 +295,14 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="hacosElet1" min="-2" max="-2" attributes="0"/>
+                      <Component id="hacosElet1" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="harcosElet2" min="-2" max="-2" attributes="0"/>
+                      <Component id="harcosElet2" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="harcosElet3" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="8" max="32767" attributes="0"/>
-                      <Component id="harcosElet4" min="-2" max="-2" attributes="0"/>
+                      <Component id="harcosElet3" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+                      <Component id="harcosElet4" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -301,7 +311,7 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="hacosElet1" max="32767" attributes="0"/>
+                          <Component id="hacosElet1" pref="25" max="32767" attributes="0"/>
                           <Component id="harcosElet2" max="32767" attributes="0"/>
                           <Component id="harcosElet4" alignment="0" max="32767" attributes="0"/>
                           <Component id="harcosElet3" alignment="0" max="32767" attributes="0"/>
@@ -320,6 +330,11 @@
                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                   <Color id="Default Cursor"/>
                 </Property>
+                <Property name="focusPainted" type="boolean" value="false"/>
+                <Property name="focusable" type="boolean" value="false"/>
+                <Property name="requestFocusEnabled" type="boolean" value="false"/>
+                <Property name="rolloverEnabled" type="boolean" value="false"/>
+                <Property name="verifyInputWhenFocusTarget" type="boolean" value="false"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="harcosElet4">
@@ -334,6 +349,7 @@
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="ff" red="20" type="rgb"/>
                 </Property>
+                <Property name="verifyInputWhenFocusTarget" type="boolean" value="false"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="harcosElet3">
@@ -347,5 +363,17 @@
         </Container>
       </SubComponents>
     </Container>
+    <Component class="javax.swing.JTextField" name="jTextField1">
+      <Properties>
+        <Property name="editable" type="boolean" value="false"/>
+        <Property name="text" type="java.lang.String" value="J&#xe1;t&#xe9;k : &quot;k&#xf6;vetkez&#x151; k&#xf6;r&quot; gombal tudja a j&#xe1;t&#xe9;kot el&#x151;re haladtatni &#xe9;s ha nyert(mikor elfogy valaki &#xe9;lete) vagy nem tetszik a jelen helyzet &quot;&#xda;j j&#xe1;t&#xe9;kkal&quot; &#xfa;jra kezdeni."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextField2">
+      <Properties>
+        <Property name="editable" type="boolean" value="false"/>
+        <Property name="text" type="java.lang.String" value="Karakterek: var&#xe1;zsl&#xf3; akkor sebez(1-et) mikor a harcos mellette vagy ugyan ott van, harcos akkor sebez(2-&#x151;t) mikor ugyan ott vannak."/>
+      </Properties>
+    </Component>
   </SubComponents>
 </Form>
