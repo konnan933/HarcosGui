@@ -3,12 +3,16 @@ package main;
 
 import java.awt.Component;
 import java.net.URL;
+import java.util.Random;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
 
 public class HarcosTer extends javax.swing.JFrame {
-    private URL[] kepek = {getClass().getResource("fightingBackground.jpg"),getClass().getResource("lovag.jpg"),getClass().getResource("varazslo.jpg")};
+    private final URL[] kepekURL = {getClass().getResource("fightingBackground.jpg"),getClass().getResource("lovag.jpg"),getClass().getResource("varazslo.jpg")};
+    private final ImageIcon[] kepek = new ImageIcon[3];
     private  Karakter varazslo = new Karakter("Varázsló",0,1);
     private  Karakter harcos = new Karakter("Harcos",2,2);
     private JButton[] harcosTerek;
@@ -21,7 +25,7 @@ public class HarcosTer extends javax.swing.JFrame {
         jatek();
     }
     
-    public JButton[] komponensekLekeres(JPanel panelNev){
+    private JButton[] komponensekLekeres(JPanel panelNev){
         Component[] components = panelNev.getComponents();
         JButton[] gombok = new JButton[components.length];       
         for (int i = 0; i < components.length; i++) {
@@ -32,9 +36,14 @@ public class HarcosTer extends javax.swing.JFrame {
         }       
         return gombok;
     }
+    private void kepekkeAlakitas(){
+        for (int i = 0; i < kepek.length; i++) {
+            ImageIcon icon = new ImageIcon(kepekURL[i]);
+            kepek[i] = icon;
+        }
+    }
     
-    
-    public void jatek(){
+    private void jatek(){
         kezdoAllapot();
     }
     @SuppressWarnings("unchecked")
@@ -122,6 +131,7 @@ public class HarcosTer extends javax.swing.JFrame {
         harcosEletEro.setBorder(javax.swing.BorderFactory.createTitledBorder("Harcos élet ereje:"));
 
         hacosElet1.setBackground(new java.awt.Color(32, 255, 0));
+        hacosElet1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         harcosElet3.setBackground(new java.awt.Color(32, 255, 0));
 
@@ -145,7 +155,7 @@ public class HarcosTer extends javax.swing.JFrame {
             .addGroup(harcosEletEroLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(harcosEletEroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(hacosElet1, javax.swing.GroupLayout.DEFAULT_SIZE, 19, Short.MAX_VALUE)
+                    .addComponent(hacosElet1, javax.swing.GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE)
                     .addComponent(harcosElet2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(harcosElet3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
@@ -188,7 +198,7 @@ public class HarcosTer extends javax.swing.JFrame {
                     .addComponent(jatekIranyitasTer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(varazsloEletEro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(248, 248, 248)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(harcosEletEro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(harcosTer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(74, Short.MAX_VALUE))
@@ -200,7 +210,7 @@ public class HarcosTer extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(harcosEletEro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(varazsloEletEro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(46, 46, 46)
+                .addGap(49, 49, 49)
                 .addComponent(harcosTer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(22, 22, 22)
                 .addComponent(jatekIranyitasTer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -211,14 +221,22 @@ public class HarcosTer extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
     
-   public void kezdoAllapot(){
+   private void kezdoAllapot(){
         harcosTerek = komponensekLekeres(harcosTer);
         varazsloElete = komponensekLekeres(varazsloEletEro);
         harcosElete = komponensekLekeres(harcosEletEro);
-        
-        
+        KezdoHelyzetLetrehoz(harcosTerek);
     }
    
+   
+   private void KezdoHelyzetLetrehoz(JButton[] harcosTer) {
+       kepekkeAlakitas();
+       harcosTer[0].setIcon((ImageIcon)kepek[2]);
+       harcosTer[1].setIcon((ImageIcon)kepek[0]);
+       harcosTer[2].setIcon((ImageIcon)kepek[1]);
+   }
+   
+     
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -238,4 +256,6 @@ public class HarcosTer extends javax.swing.JFrame {
     private javax.swing.JButton varazsloElet3;
     private javax.swing.JPanel varazsloEletEro;
     // End of variables declaration//GEN-END:variables
+
+    
 }
